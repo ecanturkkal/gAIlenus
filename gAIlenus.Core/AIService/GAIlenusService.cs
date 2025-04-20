@@ -18,7 +18,7 @@ namespace gAIlenus.Core
 
             foreach (var detail in request.Details)
             {
-                var ageAtDiagnosis = Math.Floor((DateTime.UtcNow - request.Birthdate).TotalDays / 365);
+                var ageAtDiagnosis = DateTime.UtcNow.Year - request.Birthdate.Year;
                 // Do something with age and details...
             }
 
