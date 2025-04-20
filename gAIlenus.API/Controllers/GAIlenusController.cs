@@ -21,7 +21,7 @@ public class GAIlenusController : ControllerBase
     /// <param name="DiagnosisDtos">List of patient diagnoses</param>
     /// <returns>AI prediction resulst</returns>
     [HttpPost("askToGAIlenus")]
-    public async Task<ActionResult<ApiResponseDto<GAIlenusResponseDto>>> Predict([FromBody] GAIlenusRequestDto request)
+    public async Task<ActionResult<ApiResponseDto<GAIlenusResponseDto>>> AskToGAIlenus([FromBody] GAIlenusRequestDto request)
     {
         try
         {
@@ -31,7 +31,7 @@ public class GAIlenusController : ControllerBase
         }
         catch (Exception ex)
         {
-            return new ApiResponseDto<GAIlenusResponseDto>(false, ex.Message, new GAIlenusResponseDto());
+            return new ApiResponseDto<GAIlenusResponseDto>(false, ex.Message, null);
         }
     }
 }
