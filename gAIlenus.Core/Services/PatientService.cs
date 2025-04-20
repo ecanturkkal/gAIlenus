@@ -73,6 +73,13 @@ namespace gAIlenus.Core
                 throw new Exception("Patient is not found.");
 
             _context.Patients.Remove(patient);
+
+            var diagnoses = await _context.Diagnoses.Where(p => p.PatientId == patientId).ToListAsync();
+            foreach (var item in diagnoses)
+            {
+                _context.Diagnoses.Remove(item);
+            }
+
             await _context.SaveChangesAsync();
             return true;
         }
