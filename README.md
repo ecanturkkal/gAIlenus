@@ -28,7 +28,7 @@
 
 ### Prerequisites:
 1. Install [.NET SDK](https://dotnet.microsoft.com/download/dotnet)
-2. Set up a local or remote SQL Server instance.
+2. Set up a local or remote PostgreSQL Server instance.
 3. Optionally, configure [Docker](https://www.docker.com/) for containerized environments.
 
 ### Package Dependencies
