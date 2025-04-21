@@ -46,7 +46,6 @@ namespace gAIlenus.Core
             // Specific recommendation is determined based on the diagnosis selected.
             var remarks = AIRemarks[random.Next(AIRemarks.Length)];
 
-
             return new GAIlenusResponseDto
             {
                 Diagnosis = diagnosis,
